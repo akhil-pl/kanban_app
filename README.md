@@ -1,6 +1,8 @@
 # KANBAN WEB APP
 
-Academic Project
+###### Academic Project
+
+This academic project is done for the **Modern Application Development II** course as part of the **BSc in Programming and Data Science** program offered by **IIT Madras**.
 
 
 ## Description
