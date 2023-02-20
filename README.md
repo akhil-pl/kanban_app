@@ -41,34 +41,42 @@ The entire project is organised as a proper full stack structure. All the HTML f
 4.	Also, for viewing the email install and run a MailHog server
 
 On running the app will be accessible only by registering and logging in. Once a user is logged in user will be taken to their home page. Where they can view all the lists (maximum five numbers) they currently have and the cards inside it. The cards are separated as completed and pending, and is sorted in order of deadline. There are options for viewing details of each card. User can edit or delete their account, add new list, edit or delete existing list, add new card to a list, edit or delete a card and can even move a card from one list to another. Following are the features available
-	UI with Vue & Vue Components
-	List & Card management using fetch API
-	Chart showing summary of task completion
-	Token based authentication for fetch API’s
-	Daily reminders to complete task via email
-	Able to send pdf monthly report as email
-	Able to send details as csv files on user request
-	Caching of data that don’t change frequently
+*	UI with Vue & Vue Components
+*	List & Card management using fetch API
+*	Chart showing summary of task completion
+*	Token based authentication for fetch API’s
+*	Daily reminders to complete task via email
+*	Able to send pdf monthly report as email
+*	Able to send details as csv files on user request
+*	Caching of data that don’t change frequently
 
 
 # Local Development Run
-- Run 'local_setup.sh' in a linux shell
-    This will create a virtual environment folder '.env' if not present already
-    Then it will activate the virtual environment and install all packages listed in "requirements.txt"
-- Run 'local_run.sh'
-    This will activate the virtual environment
-    Then will run the 'main.py'
-    Now you can view the app in a web browser with the link [http://localhost:8080]
-- Activate a redis server in another shell
-    use command "redis-server"
-- Activate celery schedule in another shell by:
-    Run 'local_beat.sh'
-- Activate celery worker in another shell by:
-    Run 'local_workers.sh'
-- Install and activate MailHog to view the emails
-    MailHog will be available in this link [http://localhost:8025]
-    MailHog server can be astivated by '~/go/bin/MailHog" command
-
+> #### Run 'local_setup.sh' in a linux shell
+> - This will create a virtual environment folder '.env' if not present already
+> - Then it will activate the virtual environment and install all packages listed in "requirements.txt"
+>
+> #### Run 'local_run.sh'
+> - This will activate the virtual environment
+> - Then will run the 'main.py'
+> - Now you can view the app in a web browser with the link [http://localhost:8080]
+>
+> #### Activate a redis server in another shell
+> - use command **"redis-server"**
+>
+> #### Activate celery schedule in another shell by:
+> - Run 'local_beat.sh'
+>
+> #### Activate celery worker in another shell by:
+> - Run 'local_workers.sh'
+>
+> #### Install and activate MailHog to view the emails
+> - MailHog will be available in this link [http://localhost:8025]
+> - MailHog server can be astivated by **"~/go/bin/MailHog"** command
+>
+>> ### If not working
+>> - If for some reasons it shows any error related to packages:- Please download the *.zip* or *.rar* file of original virtual environment setup used for the development of the project (Even though the package versions are specified in the *"requirements.txt"* file, changes in any sub-dependency package can cause error). Try repeating the process after making the downloaded file as the *"virtual environment"*.
+>> - https://drive.google.com/drive/folders/1EJl4nIbMkClEVi8jqokRcq2qegfUMSAo?usp=sharing
 
 
 # Folder Structure
