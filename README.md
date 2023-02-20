@@ -10,15 +10,35 @@ The aim of the project is to build a Kanban app, in which user is able to add & 
 
 ## Technologies used
 
-•	Jinja 2 – For html template rendering for sending emails and partially as frontend.
-•	Flask – Flask framework is used for the app creation as it is simple and have most of the essential extensions inbuilt.
-•	Flask-SQLAlchemy – Is used for modelling and querying of database.
-•	Flask-Security – Is used for authentication of user and to provide a basic security of data.
-•	VueJS – Is used as a JavaScript framework for building UI & UX. Inside vue.js used Vuex as the state mansgement library, Vue Router as router for making it a single page application. Also used Chart.js for generating charts.
-•	Redis – A in-memory data structure store used as message broker for managing jobs queue and also for caching.
-•	Celery – An asynchronous job queue for scheduling and executing jobs.
-•	MailHog – A fake SMTP server for email-testing
-•	Weasyprint – For generating pdfs
+*	Jinja 2
+    > For html template rendering for sending emails and partially as frontend.
+
+*	Flask
+    > Flask framework is used for the app creation as it is simple and have most of the essential extensions inbuilt.
+
+*	Flask-SQLAlchemy
+    > Used for modelling and querying of database.
+
+*	Flask-Security
+    > Used for authentication of user and to provide a basic security of data.
+
+*	VueJS
+    > Used as a JavaScript framework for building UI & UX. Inside vue.js used:
+    > - Vuex as the state mansgement library
+    > - Vue Router as router for making it a single page application
+    > - Also Chart.js for generating charts.
+
+*	Redis
+    > A in-memory data structure store used as message broker for managing jobs queue and also for caching.
+
+*	Celery
+    > An asynchronous job queue for scheduling and executing jobs.
+
+*	MailHog
+    > A fake SMTP server for email-testing
+
+*	Weasyprint
+    > For generating pdfs
 
 
 ## DB Schema Design
@@ -51,7 +71,7 @@ On running the app will be accessible only by registering and logging in. Once a
 *	Caching of data that don’t change frequently
 
 
-# Local Development Run
+## Local Development Run
 > #### Run 'local_setup.sh' in a linux shell
 > - This will create a virtual environment folder '.env' if not present already
 > - Then it will activate the virtual environment and install all packages listed in "requirements.txt"
@@ -75,11 +95,11 @@ On running the app will be accessible only by registering and logging in. Once a
 > - MailHog server can be astivated by **"~/go/bin/MailHog"** command
 >
 >> ### If not working
->> - If for some reasons it shows any error related to packages:- Please download the *.zip* or *.rar* file of original virtual environment setup used for the development of the project (Even though the package versions are specified in the *"requirements.txt"* file, changes in any sub-dependency package can cause error). Try repeating the process after making the downloaded file as the *"virtual environment"*.
+>> - If for some reasons it shows any error related to packages:- Please download the *.zip* or *.rar* file of original virtual environment setup used for the development of the project from the below link (Even though the package versions are specified in the *"requirements.txt"* file, changes in any sub-dependency package can cause error). Then try repeating the above process after making the downloaded file as the *"virtual environment"*.
 >> - https://drive.google.com/drive/folders/1EJl4nIbMkClEVi8jqokRcq2qegfUMSAo?usp=sharing
 
 
-# Folder Structure
+## Folder Structure
 
 - `application` is where our application code is
 - `CSVFiles` is where the latest csv files created are stored
