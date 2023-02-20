@@ -170,7 +170,6 @@ On running the app will be accessible only by registering and logging in. Once a
 ```
 
 
-## Video
+## Video demo
 
-https://drive.google.com/file/d/1SGvNstqQehJ31aDVtmMgpyY75034MSh4/view?usp=sharing
-NB: Please follow the link for a demo video of the app.
+http://bit.ly/3w9t8um NB: Follow this link for a video demo of the app.
