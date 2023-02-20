@@ -168,3 +168,9 @@ On running the app will be accessible only by registering and logging in. Once a
 └── requirements.txt
 
 ```
+
+
+## Video
+
+https://drive.google.com/file/d/1SGvNstqQehJ31aDVtmMgpyY75034MSh4/view?usp=sharing
+NB: Please follow the link for a demo video of the app.
