@@ -1,5 +1,55 @@
 # KANBAN WEB APP
+
 Academic Project
+
+
+## Description
+
+The aim of the project is to build a Kanban app, in which user is able to add & track tasks of their choice. The goal is to reduce the load on server by doing rendering of UI & UX on the client frontend. Meanwhile server should be able to do scheduled jobs or other jobs like sending user triggered emails, caching etc.
+
+
+## Technologies used
+
+•	Jinja 2 – For html template rendering for sending emails and partially as frontend.
+•	Flask – Flask framework is used for the app creation as it is simple and have most of the essential extensions inbuilt.
+•	Flask-SQLAlchemy – Is used for modelling and querying of database.
+•	Flask-Security – Is used for authentication of user and to provide a basic security of data.
+•	VueJS – Is used as a JavaScript framework for building UI & UX. Inside vue.js used Vuex as the state mansgement library, Vue Router as router for making it a single page application. Also used Chart.js for generating charts.
+•	Redis – A in-memory data structure store used as message broker for managing jobs queue and also for caching.
+•	Celery – An asynchronous job queue for scheduling and executing jobs.
+•	MailHog – A fake SMTP server for email-testing
+•	Weasyprint – For generating pdfs
+
+
+## DB Schema Design
+
+![ER Diagram!](ER-Diagram.png "ER Diagram")
+
+This is the ER diagram of the database schema (The lines wont be visible if you are using a dark theme). Apart from all primary keys, email in user table is having a unique constrain. List table is a one-to-many relation table of user table. Card table is a one-to-many relationship table of list table. Each relation is having delete cascade option, so once a parent object is deleted all its children will be deleted.
+
+
+## API Design
+
+API elements are created for CRUD operations of individual User, List and Card. Apart from that API for getting all lists of the user, all cards in a list and for triggering an export job is also created. The yamil file is present in ‘Open API yaml’ folder along with the project code.
+
+## Architecture and Features
+
+The entire project is organised as a proper full stack structure. All the HTML files are stored inside ‘templates’ folder. The Python codes are separated according to their purposes and are stored inside corresponding folders inside ‘application’ folder. The SQlite database file is stored inside ‘db_directory’ folder. The external packages need to be installed are listed in the ‘requirements.txt’ file. The project can be executed buy running “local_setup.sh” file followed by “local_run.sh” file in a Linux based command prompt. Then for the scheduled jobs to execute:
+1.	Start a Redis server (redis-server)
+2.	Run “local_beat.sh”
+3.	Run “local_workers.sh”
+4.	Also, for viewing the email install and run a MailHog server
+
+On running the app will be accessible only by registering and logging in. Once a user is logged in user will be taken to their home page. Where they can view all the lists (maximum five numbers) they currently have and the cards inside it. The cards are separated as completed and pending, and is sorted in order of deadline. There are options for viewing details of each card. User can edit or delete their account, add new list, edit or delete existing list, add new card to a list, edit or delete a card and can even move a card from one list to another. Following are the features available
+	UI with Vue & Vue Components
+	List & Card management using fetch API
+	Chart showing summary of task completion
+	Token based authentication for fetch API’s
+	Daily reminders to complete task via email
+	Able to send pdf monthly report as email
+	Able to send details as csv files on user request
+	Caching of data that don’t change frequently
+
 
 # Local Development Run
 - Run 'local_setup.sh' in a linux shell
