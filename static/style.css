@@ -1,0 +1,324 @@
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgrey;
+}
+
+.container-fluid {
+    margin: 0;
+}
+
+#main_sidebar{
+    background-color: rgb(46, 10, 98);
+    color: white;
+    text-align: center;
+    height: 100vh;
+}
+
+/* Home & login page */
+#main_bar, #token{
+    margin: 0;
+}
+#jumbotron{
+    background-color: rgb(46, 10, 98);
+    color: white;
+}
+
+/* inside side bar */
+article {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+}
+footer {
+    border-top: solid 1px;
+    background: rgba(242, 66, 66, 0.5);
+    width: 100%;
+    height: 80px;
+    padding-top: 10px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+/* vue installation */
+#testingVue {
+    height: 100vh;
+    margin: 0;
+}
+
+/* Navbar with vue router link */
+#fix_navbar {
+    background-color: rgb(46, 10, 98);
+    left: 0;
+    right: 0;
+    height: 10%;
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
+    }
+
+nav * {
+    display: inline;
+    }
+    
+nav li {
+    margin: 20px;
+    }
+    
+nav li a {
+    color: white;
+    text-decoration: none;
+    }
+
+nav li a:hover {
+        color: rgba(242, 66, 66, 0.5);
+      }
+
+      
+/* multiple divs inside dashboard */
+#dash_row {
+    font-family: 'Roboto', sans-serif;
+    height: 90%;
+    /* display: block; */
+    overflow: auto;
+    /* position: fixed; */
+}
+#dash_col {
+    height: 100%;
+    overflow: auto;
+}
+#dash_inside_row {
+    height: 100%;
+}
+#form_column {
+    position: relative;
+    height: 100%;
+    display: grid;
+    margin: 0;
+    grid-template-rows: 100px auto;
+    /* grid-template-columns: 100%; */
+}
+#list_column {
+    position: relative;
+    height: 100%;
+    display: grid;
+    margin: 100;
+    grid-template-rows: 100px auto;
+    grid-template-columns: 100%;
+}
+#list_details {
+    height: 100%;
+    }
+#cards {
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    margin: 0;
+}
+#status_split {
+    height: 100%;
+    grid-template-rows: 50% auto;
+}
+#pending_row, #completed_row{
+    height: 50%;
+    align-content: flex-start;
+    overflow: scroll;
+}
+#pending_row {
+    border: 3px solid red;
+    box-sizing: border-box;
+}
+#pending_tasks {
+    background-color: red;
+    position: sticky;
+}
+#completed_row {
+    border: 3px solid green;
+    box-sizing: border-box;
+}
+#completed_tasks {
+    background-color: green;
+    position: sticky;
+}
+
+/* Form border */
+#border {
+    border: 10px solid grey;
+    box-sizing: border-box;
+    background: rgba(172, 106, 106, 0.5);
+}
+
+/* List heading */
+#listname {
+    background: rgb(70, 64, 109);
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* card box */
+#card {
+    border: 3px solid gray;
+    box-sizing: border-box;
+    align-content: flex-start;
+}
+
+/* pending and completed headings */
+#pending {
+    background: red;
+}
+
+#done {
+    background: green;
+}
+
+
+
+
+
+/* Drop down */
+
+.toggle {
+  display: none;
+  visibility: hidden;
+}
+.drop {
+  display: block;
+  padding: 0.5em;
+  text-align: center;
+  /* border-bottom: 1px solid #CCC; */
+  color: #666;
+}
+.drop:hover {
+  color: #000;
+}
+.drop::before {
+  content: "-";
+  color: #000;
+}
+.expand {
+  height: 100%;
+}
+.toggle:checked + label + .expand {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.5s;
+  color: black;
+}
+.toggle:checked + label::before {
+  content: "+";
+}
+
+
+
+
+
+/* Popup form */
+* {
+    box-sizing: border-box;
+}
+
+.openBtn {
+    display: flex;
+    justify-content: center;
+}
+
+.openButton {
+    border: none;
+    border-radius: 5px;
+    background-color: #1c87c9;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+    position: fixed;
+}
+
+.loginPopup {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.formPopup {
+    display: none;
+    position: fixed;
+    color: black;
+    left: 45%;
+    top: 5%;
+    transform: translate(-50%, 5%);
+    border: 3px solid #999999;
+    z-index: 9;
+}
+
+.formContainer {
+    max-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.formContainer input[type=text],
+.formContainer input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background: #eee;
+}
+
+.formContainer input[type=text]:focus,
+.formContainer input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.formContainer .btn {
+    padding: 12px 20px;
+    border: none;
+    background-color: #8ebf42;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.formContainer .cancel {
+    background-color: #cc0000;
+}
+
+.formContainer .btn:hover,
+.openButton:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+/* Login Form */
+.waper{
+    max-width: 350px;
+    margin:50px auto;
+    background:#FFFFFF;
+	min-height:207px;
+}
+
+.head{
+   background-color: #5891ff;
+   padding:10px 10px 10px 10px;
+   color:#FFFFFF;
+   font:Geneva, Arial, Helvetica, sans-serif;
+   font-size:20px;
+   text-align: center;
+}
+
+.foc{
+ margin:10px 10px 10px 10px;
+}

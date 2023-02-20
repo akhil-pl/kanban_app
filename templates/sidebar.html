@@ -1,0 +1,36 @@
+{% if current_user.is_authenticated %}
+<article class="loged_sidebar">
+    <div><a href="/logout">Logout</a></div>
+    <div>
+        <a href='/you'>Home</a>
+        <div id="sidebar">
+            <div>
+                <user-detail></user-detail>
+            </div>
+        </div>
+        <h6 id="email" data-value="{{ current_user.email }}">{{ current_user.email }}</h6>
+    </div>
+
+    <footer>
+        <div>Contact Us<br>
+            21f1006584@student.<br>
+            onlinedegree.iitm.ac.in
+        </div>
+    </footer>
+</article>
+
+{% else %}
+
+<article>
+    <div><a href="/tokenlogin">Login</a></div>
+    <div><a href="/register">Register</a></div>
+    
+   
+    <footer>
+        <div>Contact Us<br>
+            21f1006584@student.<br>
+            onlinedegree.iitm.ac.in
+        </div>
+    </footer>
+</article>
+{% endif %}

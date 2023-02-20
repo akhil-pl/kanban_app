@@ -1,0 +1,766 @@
+openapi: 3.0.0
+info:
+  title: Kanban App Open API Documentation
+  version: 1.0.0
+  contact:
+    name: Akhil
+    email: 21f1006584@student.onlinedegree.iitm.ac.in
+    
+  description: An API for a Kanban app creating as part of a educational project. The API allows user to create new user, obtain or edit or delete details of existing users. The API also create, edit and delete lists. In addition it can create, edit and delete cards in those lists.
+    <h2> ER Diagram </h2>
+    <h4>can be viewed in the following link</h4>
+    <img src="https://https://lucid.app/documents/embedded/c3a10960-d767-4e53-9292-5167f9bd9d61?invitationId=inv_817cf038-a113-4f73-9955-570c07bee011#" />
+    
+  
+    
+    <h2> Error Code </h2>
+    <table>
+      <thead>
+        <th> Resource </th>
+        <th> Error Code </th>
+        <th> Message </th>
+      </thead>
+      <tbody>
+        <tr>
+          <td> user </td>
+          <td> U1001 </td>
+          <td> username is required </td>
+        </tr>
+        <tr>
+          <td> user </td>
+          <td> U1002 </td>
+          <td> email is required </td>
+        </tr>
+        <tr>
+          <td> user </td>
+          <td> U1003 </td>
+          <td> invalid email </td>
+        </tr>
+        <tr>
+          <td> user </td>
+          <td> U1004 </td>
+          <td> duplicate email </td>
+        </tr>
+        <tr>
+          <td> list </td>
+          <td> L1001 </td>
+          <td> list name is required </td>
+        </tr>
+        <tr>
+          <td> list </td>
+          <td> L1002 </td>
+          <td> list discription is required </td>
+        </tr>
+        <tr>
+          <td> list </td>
+          <td> L1003 </td>
+          <td> Same list name exist for this user </td>
+        </tr>
+        <tr>
+          <td> card </td>
+          <td> C1001 </td>
+          <td> task name is required </td>
+        </tr>
+        <tr>
+          <td> card </td>
+          <td> C1002 </td>
+          <td> deadline is required </td>
+        </tr>
+        <tr>
+          <td> card </td>
+          <td> C1003 </td>
+          <td> same task name exist in this list </td>
+        </tr>
+      </tbody>
+    </table>
+  
+  
+  
+servers:
+  - url: http://127.0.0.1:8080
+    description: Local server
+  
+  
+  
+tags:
+  - name: user
+    description: CRUD operations on user
+    
+  - name: list
+    description: CRUD operations on list
+    
+  - name: card
+    description: crud operation on card
+
+  - name: export
+    description: to export csv file
+
+
+
+paths:
+  /user:
+    summary: End point to add new user
+    description: Need to fill all details
+    
+    post:
+      tags:
+        - user
+      summary: Operation to create new user
+      description: Need to fill all details
+      operationId: postUserById
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+         '201':
+           description: Successfully Created
+         '400':
+           description: incorrect input
+         '401':
+           description: Duplicate email
+         default:
+           description: Default error sample response
+    
+    
+  /user/summary/{email}:
+    summary: End point to get all lists of a user
+    description: email required
+    
+    get:
+      tags:
+        - list
+      summary: Obtain details all lists of a user
+      description: Tracker name, description and cards details in it.
+      operationId: getListsById
+      parameters:
+        - in: path
+          name: email
+          required: True
+          description: email id of the user
+          schema:
+            type: string
+            example: akhil@example.com
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Lists'
+        '400':
+          description: incorrect input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error_code:
+                    type: string
+                  error_message:
+                    type: string
+        default:
+          description: Default error sample response
+          
+          
+  /user/summary/{email}/{lname}:
+    summary: End point to get cards in a list of a user
+    description: email & list name required
+    
+    get:
+      tags:
+        - list
+      summary: Obtain details of list of a user
+      description: Task name, status and time details in it.
+      operationId: getCardsById
+      parameters:
+        - in: path
+          name: email
+          required: True
+          description: email id of the user
+          schema:
+            type: string
+            example: akhil@example.com
+        - in: path
+          name: lname
+          required: True
+          schema:
+            type: string
+            example: Work            
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Card'
+        '400':
+          description: incorrect input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error_code:
+                    type: string
+                  error_message:
+                    type: string
+        default:
+          description: Default error sample response
+    
+    
+  /user/{email}:
+    summary: End point to get, update and delete an user
+    description: End point to get, update and delete an user
+    
+    get:
+      tags:
+        - user
+      summary: Obtain details of a specific user
+      description: Details including existing trackers
+      operationId: getUserById
+      parameters:
+        - in: path
+          name: email
+          required: True
+          description: email id of the user
+          schema:
+            type: string
+            example: akhil@example.com
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detailedlists'
+        '400':
+          description: incorrect input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error_code:
+                    type: string
+                  error_message:
+                    type: string
+        '404':
+          description: Email not found
+        default:
+          description: Default error sample response
+      
+    put:
+      tags:
+        - user
+      summary: Update details of an existing user
+      description: email and password should not be updated
+      operationId: putUserById
+      parameters:
+        - in: path
+          name: email
+          required: True
+          description: email id of the user
+          schema:
+            type: string
+            example: akhil@example.com
+      requestBody:
+        content:
+           application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+       '200':
+         description: Success
+       '400':
+         description: incorrect input
+       default:
+         description: Default error sample response
+         
+    delete:
+      tags:
+       - user
+      summary: Deleate an existing user
+      description: Delete user along with all lists and cards in it
+      operationId: deleteUserById
+      parameters:
+        - in: path
+          name: email
+          required: True
+          description: email id of the user
+          schema:
+            type: string
+            example: akhil@example.com
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: incorrect input
+        default:
+          description: Default error sample response
+          
+          
+  /user/list/{email}:
+    summary: End point to add new list
+    description: To add new list of a specific user
+    post:
+      tags:
+        - list
+      summary: Operation to add new list to a user
+      description: Post list data along with email
+      operationId: postList
+      parameters:
+        - in: path
+          name: email
+          required: True
+          description: email id of the user
+          schema:
+            type: string
+            example: akhil@example.com
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/List'
+      responses:
+         '200':
+           description: Success
+         '400':
+           description: incorrect input
+         default:
+           description: Default error sample response
+        
+        
+  /user/{email}/{lname}:
+    summary: End point to get, update and delete list
+    description: To get, update and delete list of a specific user
+    
+    get:
+      tags:
+        - list
+      summary: Give details of list
+      description: Details of a specific trackertype
+      operationId: getListById
+      parameters:
+        - in: path
+          name: email
+          required: True
+          description: email id of the user
+          schema:
+            type: string
+            example: akhil@example.com
+        - in: path
+          name: lname
+          required: True
+          schema:
+            type: string
+            example: Work
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detailedlist'
+        '400':
+          description: incorrect input
+        default:
+          description: Default error sample response
+      
+    put:
+      tags:
+        - list
+      summary: Update details of an list
+      description: can change description only
+      operationId: putListById
+      parameters:
+        - in: path
+          name: email
+          required: True
+          description: email id of the user
+          schema:
+            type: string
+            example: akhil@example.com
+        - in: path
+          name: lname
+          required: True
+          schema:
+            type: string
+            example: Work
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/List'
+      responses:
+       '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/List'
+       '400':
+         description: incorrect input
+       default:
+         description: Default error sample response
+         
+    delete:
+      tags:
+       - list
+      summary: Deleate an existing user's list
+      description: Delete list along with all cards in it
+      operationId: deleteListById
+      parameters:
+        - in: path
+          name: email
+          required: True
+          description: email id of the user
+          schema:
+            type: string
+            example: akhil@example.com
+        - in: path
+          name: lname
+          required: True
+          schema:
+            type: string
+            example: Work
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: incorrect input
+        default:
+          description: Default error sample response
+          
+          
+  /user/task/{email}/{lname}:
+    summary: End point to add new list
+    description: To add new list of a specific user
+ 
+    post:
+      tags:
+        - card
+      summary: Operation to create new card in a list
+      description: Create new card. Deadline should not be less than create_time. Status should be pending by default.
+      operationId: postCard
+      parameters:
+        - in: path
+          name: email
+          required: True
+          description: email id of the user
+          schema:
+            type: string
+            example: akhil@example.com
+        - in: path
+          name: lname
+          required: True
+          schema:
+            type: string
+            example: Work
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Card'
+      responses:
+         '200':
+           description: Success
+         '400':
+           description: incorrect input
+         default:
+           description: Default error sample response
+        
+        
+  /user/{email}/{lname}/{task}:
+    summary: End point to get, update and delete card in a list
+    description: End point to get, update and delete card in a list
+    
+    get:
+      tags:
+        - card
+      summary: Give details of card
+      description: Details including status
+      operationId: getCardById
+      parameters:
+        - in: path
+          name: email
+          required: True
+          description: email id of the user
+          schema:
+            type: string
+            example: akhil@example.com
+        - in: path
+          name: lname
+          required: True
+          schema:
+            type: string
+            example: Work
+        - in: path
+          name: task
+          required: True
+          schema:
+            type: string
+            example: MAD II Project
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Card'
+        '400':
+          description: incorrect input
+        default:
+          description: Default error sample response
+      
+    put:
+      tags:
+        - card
+      summary: Update details of an existing card
+      description: Should not change create_time, deadline and completion_time should not be less than create_time
+      operationId: putCardsById
+      parameters:
+        - in: path
+          name: email
+          required: True
+          description: email id of the user
+          schema:
+            type: string
+            example: akhil@example.com
+        - in: path
+          name: lname
+          required: True
+          schema:
+            type: string
+            example: Work
+        - in: path
+          name: task
+          required: True
+          schema:
+            type: string
+            example: MAD II Project
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Card'
+      responses:
+       '200':
+         description: Success
+       '400':
+         description: incorrect input
+       default:
+         description: Default error sample response
+         
+    delete:
+      tags:
+       - card
+      summary: Deleate an existing card
+      description: Delete a card
+      operationId: deletetCardsById
+      parameters:
+        - in: path
+          name: email
+          required: True
+          description: email id of the user
+          schema:
+            type: string
+            example: akhil@example.com
+        - in: path
+          name: lname
+          required: True
+          schema:
+            type: string
+            example: Work
+        - in: path
+          name: task
+          required: True
+          schema:
+            type: string
+            example: MAD II Project
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: incorrect input
+        default:
+          description: Default error sample response
+          
+
+  /user/export/{email}:
+    summary: End point to triger a task to send csv file
+    description: a csv file is send as mail to the users mail id
+    
+    get:
+      tags:
+        - export
+      summary: Obtain details all lists of a user
+      description: a csv file containing all list details is send as mail to the users mail id
+
+      operationId: getListsCSVById
+      parameters:
+        - in: path
+          name: email
+          required: True
+          description: email id of the user
+          schema:
+            type: string
+            example: akhil@example.com
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: incorrect input
+        default:
+          description: Default error sample response
+          
+  /user/export/{email}/{lname}:
+    summary: End point to triger a task to send csv file
+    description: a csv file is send as mail to the users mail id
+    
+    get:
+      tags:
+        - export
+      summary: Obtain details all lists of a user
+      description: a csv file containing all list details is send as mail to the users mail id
+
+      operationId: getListCSVById
+      parameters:
+        - in: path
+          name: email
+          required: True
+          description: email id of the user
+          schema:
+            type: string
+            example: akhil@example.com
+        - in: path
+          name: lname
+          required: True
+          schema:
+            type: string
+            example: Work
+
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: incorrect input
+        default:
+          description: Default error sample response
+    
+    
+
+  
+          
+
+
+components:
+  schemas:
+    Useremail:
+      description: Model containing user info
+      properties:
+        email:
+          type: string
+          example: he@akhil.com
+          
+          
+    User:
+      description: Model containing user info
+      properties:
+        uname:
+          type: string
+          example: Akhil
+        email:
+          type: string
+          example: he@akhil.com
+        password:
+          type: string
+        gender:
+          type: string
+          example: Male
+        dob:
+          type: string
+          example: 1991-11-11
+   
+   
+    List:
+      description: Model containing list info
+      properties:
+        lid:
+          type: integer
+          example: 4
+        lname:
+          type: string
+          example: Work
+        description:
+          type: string
+          example: Tasks at office
+      
+   
+    Lists:
+      description: Array of lists
+      type: array
+      items:
+        $ref: '#/components/schemas/List'          
+    
+    Userlists:
+      description: Details of each user along with lists array
+      type: object
+      properties:
+        Useremail:
+          $ref: '#/components/schemas/Useremail'
+        Lists:
+          $ref: '#/components/schemas/Lists'
+   
+    Card:
+      description: Model containing card info
+      properties:
+        lid:
+          type: integer
+          example: 11
+        task:
+          type: string
+          example: MAD II Project
+        details:
+          type: string
+          example: Kanban Project
+        create_time:
+          type: string
+          example: 2022-12-18
+        deadline:
+          type: string
+          example: 2023-01-16
+        status:
+          type: boolean
+          example: FALSE
+        completion_time:
+          type: string
+          example: 2023-01-02
+    
+    Cards:
+      description: Array of cards
+      type: array
+      items:
+        $ref: '#/components/schemas/Card'
+   
+   
+    Detailedlist:
+      description: Complete detail of a list
+      allOf:
+        - $ref: '#/components/schemas/Useremail'
+        - $ref: '#/components/schemas/List'
+        - $ref: '#/components/schemas/Card'
+   
+   
+    Detailedlists:
+      description: Array of detailed lists
+      type: array
+      items:
+        $ref: '#/components/schemas/Detailedlist'
+        
