@@ -1,3 +1,6 @@
+# kanban_app
+Academic project
+
 # Local Development Run
 - Run 'local_setup.sh' in a linux shell
     This will create a virtual environment folder '.env' if not present already
