@@ -10,34 +10,34 @@ The aim of the project is to build a Kanban app, in which user is able to add & 
 
 ## Technologies used
 
-*	Jinja 2
+*	`Jinja 2`
     > For html template rendering for sending emails and partially as frontend.
 
-*	Flask
+*	`Flask`
     > Flask framework is used for the app creation as it is simple and have most of the essential extensions inbuilt.
 
-*	Flask-SQLAlchemy
+*	`Flask-SQLAlchemy`
     > Used for modelling and querying of database.
 
-*	Flask-Security
+*	`Flask-Security`
     > Used for authentication of user and to provide a basic security of data.
 
-*	VueJS
+*	`VueJS`
     > Used as a JavaScript framework for building UI & UX. Inside vue.js used:
     > - Vuex as the state mansgement library
     > - Vue Router as router for making it a single page application
     > - Also Chart.js for generating charts.
 
-*	Redis
+*	`Redis`
     > A in-memory data structure store used as message broker for managing jobs queue and also for caching.
 
-*	Celery
+*	`Celery`
     > An asynchronous job queue for scheduling and executing jobs.
 
-*	MailHog
+*	`MailHog`
     > A fake SMTP server for email-testing
 
-*	Weasyprint
+*	`Weasyprint`
     > For generating pdfs
 
 
@@ -95,8 +95,10 @@ On running the app will be accessible only by registering and logging in. Once a
 > - MailHog server can be astivated by **"~/go/bin/MailHog"** command
 >
 >> ### If not working
->> - If for some reasons it shows any error related to packages:- Please download the *.zip* or *.rar* file of original virtual environment setup used for the development of the project from the below link (Even though the package versions are specified in the *"requirements.txt"* file, changes in any sub-dependency package can cause error). Then try repeating the above process after making the downloaded file as the *"virtual environment"*.
->> - https://drive.google.com/drive/folders/1EJl4nIbMkClEVi8jqokRcq2qegfUMSAo?usp=sharing
+>> - If for some reasons it shows any error related to packages,
+>> - Please download the *.zip* or *.rar* file of original virtual environment setup used for the development of the project from this [link](https://drive.google.com/drive/folders/1EJl4nIbMkClEVi8jqokRcq2qegfUMSAo?usp=sharing).
+>> - (Even though the package versions are specified in the *"requirements.txt"* file, changes in any sub-dependency package can cause error.)
+>> - Then try repeating the above process after making the downloaded file as the *"virtual environment"*.
 
 
 ## Folder Structure
@@ -172,4 +174,4 @@ On running the app will be accessible only by registering and logging in. Once a
 
 ## Video demo
 
-http://bit.ly/3w9t8um NB: Follow this link for a video demo of the app.
+NB: Follow this [link](http://bit.ly/3w9t8um) for a video demo of the app.
