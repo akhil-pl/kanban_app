@@ -14500,3 +14500,90 @@
 2023-01-15 11:07:53,713 INFO werkzeug Thread-26 (process_request_thread) : 127.0.0.1 - - [15/Jan/2023 11:07:53] "[36mGET /static/sidebar.js HTTP/1.1[0m" 304 -
 2023-01-15 11:07:53,725 INFO werkzeug Thread-27 (process_request_thread) : 127.0.0.1 - - [15/Jan/2023 11:07:53] "[36mGET /static/tokenlogin.js HTTP/1.1[0m" 304 -
 2023-01-15 11:07:53,816 INFO werkzeug Thread-28 (process_request_thread) : 127.0.0.1 - - [15/Jan/2023 11:07:53] "[33mGET /user/summary/ HTTP/1.1[0m" 404 -
+2023-02-28 16:26:06,040 WARNING root MainThread : no boto3 module found
+2023-02-28 16:26:06,488 DEBUG passlib.registry MainThread : registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2023-02-28 16:26:06,512 DEBUG passlib.registry MainThread : registered 'argon2' handler: <class 'passlib.handlers.argon2.argon2'>
+2023-02-28 16:26:06,576 DEBUG passlib.registry MainThread : registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+2023-02-28 16:26:06,577 DEBUG passlib.registry MainThread : registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+2023-02-28 16:26:06,608 DEBUG passlib.registry MainThread : registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+2023-02-28 16:26:06,609 DEBUG passlib.registry MainThread : registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+2023-02-28 16:26:06,642 DEBUG passlib.registry MainThread : registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+2023-02-28 16:26:06,701 DEBUG passlib.registry MainThread : registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+2023-02-28 16:26:07,306 INFO main MainThread : App setup complete
+2023-02-28 16:26:07,408 INFO main MainThread : App setup complete
+2023-02-28 16:26:17,260 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.18.221.98:8080
+2023-02-28 16:26:17,261 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-02-28 16:26:17,294 INFO werkzeug MainThread :  * Restarting with stat
+2023-02-28 16:26:22,072 WARNING root MainThread : no boto3 module found
+2023-02-28 16:26:22,478 DEBUG passlib.registry MainThread : registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2023-02-28 16:26:22,488 DEBUG passlib.registry MainThread : registered 'argon2' handler: <class 'passlib.handlers.argon2.argon2'>
+2023-02-28 16:26:22,508 DEBUG passlib.registry MainThread : registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+2023-02-28 16:26:22,508 DEBUG passlib.registry MainThread : registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+2023-02-28 16:26:22,517 DEBUG passlib.registry MainThread : registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+2023-02-28 16:26:22,517 DEBUG passlib.registry MainThread : registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+2023-02-28 16:26:22,526 DEBUG passlib.registry MainThread : registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+2023-02-28 16:26:22,544 DEBUG passlib.registry MainThread : registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+2023-02-28 16:26:22,753 INFO main MainThread : App setup complete
+2023-02-28 16:26:22,785 INFO main MainThread : App setup complete
+2023-02-28 16:26:25,627 WARNING werkzeug MainThread :  * Debugger is active!
+2023-02-28 16:26:25,665 INFO werkzeug MainThread :  * Debugger PIN: 510-537-150
+2023-02-28 16:27:37,939 WARNING root MainThread : no boto3 module found
+2023-02-28 16:27:38,318 DEBUG passlib.registry MainThread : registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2023-02-28 16:27:38,349 DEBUG passlib.registry MainThread : registered 'argon2' handler: <class 'passlib.handlers.argon2.argon2'>
+2023-02-28 16:27:38,406 DEBUG passlib.registry MainThread : registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+2023-02-28 16:27:38,407 DEBUG passlib.registry MainThread : registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+2023-02-28 16:27:38,433 DEBUG passlib.registry MainThread : registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+2023-02-28 16:27:38,434 DEBUG passlib.registry MainThread : registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+2023-02-28 16:27:38,459 DEBUG passlib.registry MainThread : registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+2023-02-28 16:27:38,511 DEBUG passlib.registry MainThread : registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+2023-02-28 16:27:39,087 INFO main MainThread : App setup complete
+2023-02-28 16:28:18,777 WARNING root MainThread : no boto3 module found
+2023-02-28 16:28:19,019 DEBUG passlib.registry MainThread : registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2023-02-28 16:28:19,042 DEBUG passlib.registry MainThread : registered 'argon2' handler: <class 'passlib.handlers.argon2.argon2'>
+2023-02-28 16:28:19,080 DEBUG passlib.registry MainThread : registered 'des_crypt' handler: <class 'passlib.handlers.des_crypt.des_crypt'>
+2023-02-28 16:28:19,081 DEBUG passlib.registry MainThread : registered 'pbkdf2_sha512' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha512'>
+2023-02-28 16:28:19,099 DEBUG passlib.registry MainThread : registered 'sha256_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha256_crypt'>
+2023-02-28 16:28:19,100 DEBUG passlib.registry MainThread : registered 'sha512_crypt' handler: <class 'passlib.handlers.sha2_crypt.sha512_crypt'>
+2023-02-28 16:28:19,122 DEBUG passlib.registry MainThread : registered 'plaintext' handler: <class 'passlib.handlers.misc.plaintext'>
+2023-02-28 16:28:19,172 DEBUG passlib.registry MainThread : registered 'hex_md5' handler: <class 'passlib.handlers.digests.hex_md5'>
+2023-02-28 16:28:19,636 INFO main MainThread : App setup complete
+2023-02-28 16:29:37,548 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:29:37] "GET / HTTP/1.1" 200 -
+2023-02-28 16:29:37,783 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:29:37] "GET /static/style.css HTTP/1.1" 200 -
+2023-02-28 16:29:37,791 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:29:37] "GET /static/tokenlogin.js HTTP/1.1" 200 -
+2023-02-28 16:29:37,796 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:29:37] "GET /static/sidebar.js HTTP/1.1" 200 -
+2023-02-28 16:29:37,796 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:29:37] "GET /static/index.js HTTP/1.1" 200 -
+2023-02-28 16:29:40,902 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:29:40] "[33mGET /user/summary/ HTTP/1.1[0m" 404 -
+2023-02-28 16:29:42,626 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:29:42] "GET / HTTP/1.1" 200 -
+2023-02-28 16:29:42,752 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:29:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-02-28 16:29:42,753 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:29:42] "[36mGET /static/sidebar.js HTTP/1.1[0m" 304 -
+2023-02-28 16:29:42,757 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:29:42] "[36mGET /static/index.js HTTP/1.1[0m" 304 -
+2023-02-28 16:29:42,770 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:29:42] "[36mGET /static/tokenlogin.js HTTP/1.1[0m" 304 -
+2023-02-28 16:29:42,913 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:29:42] "[33mGET /user/summary/ HTTP/1.1[0m" 404 -
+2023-02-28 16:33:00,601 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:00] "GET /tokenlogin HTTP/1.1" 200 -
+2023-02-28 16:33:00,720 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-02-28 16:33:00,727 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:00] "[36mGET /static/index.js HTTP/1.1[0m" 304 -
+2023-02-28 16:33:00,728 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:00] "[36mGET /static/tokenlogin.js HTTP/1.1[0m" 304 -
+2023-02-28 16:33:00,733 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:00] "[36mGET /static/sidebar.js HTTP/1.1[0m" 304 -
+2023-02-28 16:33:01,506 INFO werkzeug Thread-19 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:01] "[33mGET /user/summary/ HTTP/1.1[0m" 404 -
+2023-02-28 16:33:05,930 DEBUG passlib.handlers.bcrypt Thread-20 (process_request_thread) : detected 'bcrypt' backend, version '3.2.2'
+2023-02-28 16:33:05,931 DEBUG passlib.handlers.bcrypt Thread-20 (process_request_thread) : 'bcrypt' backend lacks $2$ support, enabling workaround
+2023-02-28 16:33:06,210 INFO werkzeug Thread-20 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:06] "POST /login?include_auth_token HTTP/1.1" 200 -
+2023-02-28 16:33:06,282 INFO werkzeug Thread-21 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:06] "GET /you HTTP/1.1" 200 -
+2023-02-28 16:33:06,404 INFO werkzeug Thread-22 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-02-28 16:33:06,416 INFO werkzeug Thread-23 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:06] "[36mGET /static/index.js HTTP/1.1[0m" 304 -
+2023-02-28 16:33:06,417 INFO werkzeug Thread-24 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:06] "[36mGET /static/tokenlogin.js HTTP/1.1[0m" 304 -
+2023-02-28 16:33:06,418 INFO werkzeug Thread-25 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:06] "[36mGET /static/sidebar.js HTTP/1.1[0m" 304 -
+2023-02-28 16:33:06,672 INFO werkzeug Thread-26 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:06] "GET /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-28 16:33:06,690 INFO werkzeug Thread-27 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:06] "GET /user/summary/he@akhil.com HTTP/1.1" 200 -
+2023-02-28 16:33:06,741 INFO werkzeug Thread-28 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:06] "GET /user/he@akhil.com HTTP/1.1" 200 -
+2023-02-28 16:33:06,861 INFO werkzeug Thread-29 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:06] "GET /user/summary/he@akhil.com/MAD%20II%20Project HTTP/1.1" 200 -
+2023-02-28 16:33:06,925 INFO werkzeug Thread-30 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:06] "GET /user/summary/he@akhil.com/Study HTTP/1.1" 200 -
+2023-02-28 16:33:06,995 INFO werkzeug Thread-31 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:06] "GET /user/summary/he@akhil.com/Work HTTP/1.1" 200 -
+2023-02-28 16:33:07,057 INFO werkzeug Thread-32 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:07] "GET /user/summary/he@akhil.com/Workout HTTP/1.1" 200 -
+2023-02-28 16:33:07,119 INFO werkzeug Thread-33 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:07] "GET /user/summary/he@akhil.com/വീട് HTTP/1.1" 200 -
+2023-02-28 16:33:12,388 DEBUG main Thread-34 (process_request_thread) : Report mail attribute {'uname': 'Ram', 'email': 'he@akhil.com'}
+2023-02-28 16:33:12,396 DEBUG main Thread-34 (process_request_thread) : Export mail attribute he@akhil.com
+2023-02-28 16:33:12,403 INFO werkzeug Thread-34 (process_request_thread) : 127.0.0.1 - - [28/Feb/2023 16:33:12] "GET /user/export/he@akhil.com HTTP/1.1" 200 -

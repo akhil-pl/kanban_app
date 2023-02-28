@@ -1,0 +1,2 @@
+For sending the monthly report a pdf file is created for each user, that file is saved in this folder.
+After sending the mail the file is been deleted. So the folder will be mostly empty.

@@ -1,0 +1,2 @@
+When a user requests for a CSVFile to be sent as mail, that file is created in this folder.
+After sending the mail the file is been deleted. So the folder will be mostly empty.
